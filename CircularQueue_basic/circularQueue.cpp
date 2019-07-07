@@ -57,9 +57,23 @@ void Queue::printQueue(){
 
 	if (front != -1)			// if queue is not empty,
 	{
+		int counter = 0;
 		for (int i = 0; i <= rear; i++)
 		{
-			std::cout << i << ". element is " << arr[i] << std::endl;
+			if (arr[i] != -1)
+			{
+				std::cout << counter << ". element is " << arr[i] << std::endl;
+				counter++;
+			}
+		}
+
+		for (int i = rear+1; i < size; i++)
+		{
+			if (arr[i] != -1)
+			{
+				std::cout << counter << ". element is " << arr[i] << std::endl;
+				counter++;
+			}
 		}
 	}
 	else
