@@ -7,6 +7,7 @@ struct Queue
 {
 	int front, rear, size;
 	int *arr;
+	int *headerPtr;
 
 	Queue(int s);
 
